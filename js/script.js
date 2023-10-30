@@ -35,6 +35,19 @@ createApp({
         }
     },
     methods: {
-
+        prev(){
+            if(this.activeSlide === this.slides.length - 1){
+                this.activeSlide = 0;
+              } else {
+                this.activeSlide ++;
+            }
+        },
+        next(){
+            if(this.activeSlide === 0){
+                this.activeSlide = this.slides.length - 1;
+              } else {
+                this.activeSlide --;
+            }
+        }
     }
 }).mount('#app')
